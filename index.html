@@ -60,23 +60,25 @@
   .sk:hover { color: var(--text); border-color: var(--border2); }
 
   /* WORK — project row */
-  .proj-row { display: grid; grid-template-columns: 72px 200px 1fr; align-items: stretch; border-bottom: 1px solid var(--border); text-decoration: none; transition: background .25s; }
+  /* WORK */
+  .proj-row { display: grid; grid-template-columns: 72px 1fr; align-items: stretch; border-bottom: 1px solid var(--border); text-decoration: none; transition: background .25s; }
   .proj-row:last-child { border-bottom: none; }
   .proj-row:hover { background: var(--white); }
-  .proj-num { font-family: 'Syne Mono', monospace; font-size: 11px; color: var(--muted); padding: 36px 0 36px 48px; border-right: 1px solid var(--border); display: flex; align-items: flex-start; }
+  .proj-num { font-family: 'Syne Mono', monospace; font-size: 11px; color: var(--muted); padding: 36px 0 36px 48px; border-right: 1px solid var(--border); display: flex; align-items: flex-start; flex-shrink: 0; }
+  .proj-main { display: grid; grid-template-columns: 220px 1fr; align-items: stretch; }
   .proj-info { padding: 36px 40px; border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; }
   .proj-name { font-size: 26px; font-weight: 800; letter-spacing: -1px; text-transform: uppercase; color: var(--text); margin-bottom: 6px; }
   .proj-type { font-family: 'Syne Mono', monospace; font-size: 10px; letter-spacing: 1.5px; color: var(--muted); }
 
   /* SCREENSHOT PREVIEW */
-  .proj-preview { padding: 20px 28px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
-  .browser { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-  .b-bar { display: flex; align-items: center; gap: 6px; padding: 7px 10px; background: var(--surface); border-bottom: 1px solid var(--border); }
+  .proj-preview { padding: 24px 32px; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+  .browser { border: 1px solid var(--border); border-radius: 6px 6px 0 0; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+  .b-bar { display: flex; align-items: center; gap: 6px; padding: 8px 12px; background: var(--surface); border-bottom: 1px solid var(--border); }
   .dot { width: 7px; height: 7px; border-radius: 50%; }
   .dot.r { background: #e8c4c4; } .dot.y { background: #e0d8a8; } .dot.g { background: #b8d8b8; }
   .b-url { font-family: 'Syne Mono', monospace; font-size: 9px; color: var(--muted); margin: 0 auto; }
-  .b-screenshot { width: 100%; height: 150px; object-fit: cover; object-position: top center; display: block; transition: transform .4s ease; }
-  .proj-row:hover .b-screenshot { transform: scale(1.02); }
+  .b-screenshot { width: 100%; height: 180px; object-fit: cover; object-position: top left; display: block; transition: transform .5s ease; }
+  .proj-row:hover .b-screenshot { transform: scale(1.015); }
   .proj-link { font-family: 'Syne Mono', monospace; font-size: 10px; letter-spacing: 1px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; transition: color .2s; }
   .proj-row:hover .proj-link { color: var(--text); }
   .arr { transition: transform .2s; }
@@ -172,6 +174,7 @@
 
   <a class="proj-row reveal" href="https://mumaroi.de" target="_blank" rel="noopener">
     <div class="proj-num">01</div>
+    <div class="proj-main">
     <div class="proj-info">
       <div class="proj-name">Mumaroi</div>
       <div class="proj-type" data-i18n="proj1-type">Thai Restaurant · Offenburg</div>
@@ -186,12 +189,15 @@
       </div>
       <div class="proj-link">mumaroi.de <span class="arr">&#x2192;</span></div>
     </div>
+    </div>
   </a>
 
   <div class="proj-row soon">
     <div class="proj-num">02</div>
+    <div class="proj-main">
     <div class="proj-info"><div class="proj-name" style="color:var(--border2)">&#x2014; &#x2014; &#x2014;</div></div>
     <div class="soon-txt" data-i18n="proj-soon">Coming soon</div>
+    </div>
   </div>
 </section>
 
@@ -201,8 +207,8 @@
     <div class="contact-big reveal">LET'S<br><span class="dim">TALK.</span></div>
     <div class="c-grid reveal">
       <a href="tel:+4915140190532" class="c-item"><div class="c-lbl" data-i18n="c-phone">Phone</div><div class="c-val">+49 151 4019 0532</div></a>
-      <a href="mailto:roman.pleshka6@gmail.com" class="c-item"><div class="c-lbl">Email</div><div class="c-val">roman.pleshka6@gmail.com</div></a>
-      <a href="https://t.me/romanpleshka" target="_blank" class="c-item"><div class="c-lbl">Telegram</div><div class="c-val">@romanpleshka</div></a>
+      <a href="/cdn-cgi/l/email-protection#61130e0c000f4f110d0412090a005721060c00080d4f020e0c" class="c-item"><div class="c-lbl">Email</div><div class="c-val"><span class="__cf_email__" data-cfemail="fa8895979b94d48a969f8992919bccba9d979b9396d4999597">[email&#160;protected]</span></div></a>
+      <a href="https://t.me/romanpleshka" target="_blank" class="c-item"><div class="c-lbl">Telegram</div><div class="c-val">@r_pleshka</div></a>
     </div>
   </div>
 </section>
@@ -212,7 +218,7 @@
   <div class="f-r">roman-pleshka.github.io</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const cur=document.getElementById('cur'),curR=document.getElementById('curR');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
@@ -231,9 +237,4 @@ document.getElementById('langBtn').addEventListener('click',()=>{
   document.getElementById('langBtn').textContent=lang==='en'?'DE':'EN';
   document.documentElement.lang=lang;
   document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(tr[lang][k])el.textContent=tr[lang][k];});
-  document.querySelector('.contact-big').innerHTML=lang==='de'?'LASS<br><span class="dim">UNS REDEN.</span>':"LET'S<br><span class='dim'>TALK.</span>";
-  document.querySelector('.about-big').innerHTML=lang==='de'?'WEBSITES<br>DIE<br><span class="dim">WIRKLICH</span><br>FUNKTIONIEREN.':"MAKING<br>WEBSITES<br><span class='dim'>THAT</span><br>WORK.";
-});
-</script>
-</body>
-</html>
+  document.querySelector('.contact-big').innerHTML=lang==='de'?'LASS<br><span class="dim">UNS REDEN.</span>':"LET'S<br><span c
